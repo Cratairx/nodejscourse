@@ -10,7 +10,8 @@ module.exports = (app) => {
     app.get('/',(req,res) => {
         res.send('Hej du är på start sidan')
     });
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get('/auth/google/callback', passport.authenticate('google', {failureRedirect: '/'}),
+        (req, res) =>res.redirect('/'));
 
     app.get('/api/logout', (req, res, next) => {
         req.logout((err) => {
