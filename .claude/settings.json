@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(./config/dev.js)",
+      "Edit(./config/dev.js)"
+    ]
+  }
+}
