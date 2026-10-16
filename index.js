@@ -1,6 +1,8 @@
 // dns grejerna för min stationära testa på bärbara om det är samma fel alla behöver kanske inte göra detta
-const dns = require('dns');
-dns.setServers(['8.8.8.8', '1.1.1.1']);
+if (process.env.NODE_ENV !== 'production') {
+    const dns = require('dns');
+    dns.setServers(['8.8.8.8', '1.1.1.1']);
+}
 const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
