@@ -3,7 +3,7 @@ module.exports = (survey) => {
 
 
     return `
-    <html>
+ <html>
      <body>
       <div style = "text-align: center">
         <h3>I'd like your input</h3>
@@ -16,13 +16,8 @@ module.exports = (survey) => {
           <a href = "${keys.redirectDomain}/api/surveys/thanks"> No </a> 
         </div>
       </div>
-     </body>
-    
-    
-    
-    
-</html>
-    
+     </body>     
+</html>    
     
     `;
 
