@@ -7,6 +7,7 @@ const requireCredits = require('../middlewares/requireCredits');
 const Survey = mongoose.model('surveys');
 const Mailer = require('../services/Mailer');
 const surveyTemplate = require('../services/emailTemplates/surveyTemplate');
+// extra commit for deployment on render
 module.exports = app => {
 
     app.get('/api/surveys', requireLogin, async (req, res) => {
